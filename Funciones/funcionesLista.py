@@ -75,7 +75,8 @@ def calcularGastos (listaRecorrer, tiempoX):
         # d = Diario
         if(tiempoX == "d"):
             if(fechaGuia.date() == today.date()):
-                total += listaRecorrer[i]["monto"] 
+                total += listaRecorrer[i]["monto"]
+                
         # s = Semanal   
         elif(tiempoX == "s"):    
             if((today - fechaGuia).days <= 7):

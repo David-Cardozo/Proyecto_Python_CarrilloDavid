@@ -106,15 +106,21 @@ while (dataBool):
 
             if(opcionCalcularGas == 1):
                 totalDiario = calcularGastos(listaData, "d")
+                print("")
                 print(f"- Total diario:   {totalDiario}")
+                print("")
 
             elif(opcionCalcularGas == 2):
                 totalSemanal = calcularGastos(listaData, "s")
+                print("")
                 print(f"- Total semanal:   {totalSemanal}")
+                print("")
 
             elif(opcionCalcularGas == 3):
                 totalMensual = calcularGastos(listaData, "m")
+                print("")
                 print(f"- Total mensual:    {totalMensual}")
+                print("")
             elif(opcionCalcularGas == 4):
 
                 print("")
