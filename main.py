@@ -19,6 +19,8 @@ while (dataBool):
     print("6. Actualizar gasto especifico")
     print("7. Salir")
     opcionUsu = (int(input("Escoja una opcion -Numerica- :  ")))
+    print("")
+    print("")
 
     if (opcionUsu == 1):
         print("=========================================================================")
@@ -59,6 +61,8 @@ while (dataBool):
             print("4. Regresar al menu principal")
             print("=========================================================================")
             opcionListarGas = (int(input("Escoja una opcion -Numerica- :  ")))
+            print("")
+            print("")
         
             if (opcionListarGas == 1):
 
@@ -103,6 +107,8 @@ while (dataBool):
             print("4. Regresar al menu principal")
             print("=========================================================================")
             opcionCalcularGas = (int(input("Escoja una opcion -Numerica- :  ")))
+            print("")
+            print("")
 
             if(opcionCalcularGas == 1):
                 totalDiario = calcularGastos(listaData, "d")

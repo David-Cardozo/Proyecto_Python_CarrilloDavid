@@ -114,23 +114,23 @@
     {
         "id": 18,
         "monto": 110,
-        "categoria": "Comida",
+        "categoria": "Salud",
         "descripcion": "Cena con familia",
-        "fecha": "02-05-2021"
+        "fecha": "20-05-2025"
     },
     {
         "id": 19,
         "monto": 150,
         "categoria": "Salud",
         "descripcion": "Consulta médica",
-        "fecha": "01-05-2022"
+        "fecha": "20-05-2025"
     },
     {
         "id": 20,
         "monto": 70,
         "categoria": "Comida",
         "descripcion": "Sushi para llevar",
-        "fecha": "30-04-2025"
+        "fecha": "20-05-2025"
     },
     {
         "id": 21,
@@ -142,7 +142,7 @@
     {
         "id": 22,
         "monto": 200,
-        "categoria": "Comida",
+        "categoria": "Ropa",
         "descripcion": "N.A.",
         "fecha": "20-05-2025"
     }

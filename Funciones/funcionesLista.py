@@ -70,19 +70,23 @@ def calcularGastos (listaRecorrer, tiempoX):
     total = 0
 
     for i in range(len(listaRecorrer)):
-
+        categoria = listaRecorrer[i]["categoria"]
+        montoCategoria = listaRecorrer[i]["monto"]
         fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%d-%m-%Y")
         # d = Diario
         if(tiempoX == "d"):
             if(fechaGuia.date() == today.date()):
                 total += listaRecorrer[i]["monto"]
+                print(f"La categoria {categoria} tiene un monto de: {montoCategoria}")
                 
         # s = Semanal   
         elif(tiempoX == "s"):    
             if((today - fechaGuia).days <= 7):
                 total += listaRecorrer[i]["monto"]
+                print(f"La categoria {categoria} tiene un monto de: {montoCategoria}")
         #m = mensual
         elif(tiempoX == "m"):
             if(fechaGuia.year == today.year and fechaGuia.month == today.month):
                 total += listaRecorrer[i]["monto"]
+                print(f"La categoria {categoria} tiene un monto de: {montoCategoria}")
     return total
