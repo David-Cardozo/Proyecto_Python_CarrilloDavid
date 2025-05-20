@@ -104,7 +104,8 @@ while (dataBool):
             print("1. Calcular total diario")
             print("2. Calcular total semanal")
             print("3. Calcular total mensual")
-            print("4. Regresar al menu principal")
+            print("4. Desglose por categoria")
+            print("5. Regresar al menu principal")
             print("=========================================================================")
             opcionCalcularGas = (int(input("Escoja una opcion -Numerica- :  ")))
             print("")
@@ -128,7 +129,11 @@ while (dataBool):
                 print(f"- Total mensual:    {totalMensual}")
                 print("")
             elif(opcionCalcularGas == 4):
+                print("")
+                print(desgloseCategoria(listaData))
+                print("")
 
+            elif(opcionCalcularGas == 5):
                 print("")
                 print("Regresando el menu principal!!!!")
                 print("")

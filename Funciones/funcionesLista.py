@@ -70,9 +70,11 @@ def calcularGastos (listaRecorrer, tiempoX):
     total = 0
 
     for i in range(len(listaRecorrer)):
+        
         categoria = listaRecorrer[i]["categoria"]
         montoCategoria = listaRecorrer[i]["monto"]
         fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%d-%m-%Y")
+
         # d = Diario
         if(tiempoX == "d"):
             if(fechaGuia.date() == today.date()):
@@ -90,3 +92,11 @@ def calcularGastos (listaRecorrer, tiempoX):
                 total += listaRecorrer[i]["monto"]
                 print(f"La categoria {categoria} tiene un monto de: {montoCategoria}")
     return total
+
+def desgloseCategoria (listaRecorrer):
+    for i in range(len(listaRecorrer)):
+        
+        print("=========================================================================")
+        print("- Categoria:   ", listaRecorrer[i]["categoria"])
+        print("- Monto:   ", listaRecorrer[i]["monto"])
+        print("=========================================================================")
