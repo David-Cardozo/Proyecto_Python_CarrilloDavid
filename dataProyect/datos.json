@@ -4,132 +4,146 @@
         "monto": 50,
         "categoria": "Comida",
         "descripcion": "Cena en restaurante",
-        "fecha": "2024-05-18"
+        "fecha": "18-05-2024"
     },
     {
         "id": 3,
         "monto": 120,
         "categoria": "Ropa",
         "descripcion": "Compra de camiseta",
-        "fecha": "2025-05-17"
+        "fecha": "17-05-2025"
     },
     {
         "id": 4,
         "monto": 250,
         "categoria": "Transporte",
         "descripcion": "Boleto de tren",
-        "fecha": "2024-05-16"
+        "fecha": "16-05-2024"
     },
     {
         "id": 5,
         "monto": 100,
         "categoria": "Comida",
         "descripcion": "Almuerzo en restaurante",
-        "fecha": "2022-05-15"
+        "fecha": "15-05-2022"
     },
     {
         "id": 6,
         "monto": 15,
         "categoria": "Comida",
         "descripcion": "Café y pastel",
-        "fecha": "2023-05-14"
+        "fecha": "14-05-2023"
     },
     {
         "id": 7,
         "monto": 200,
         "categoria": "Entretenimiento",
         "descripcion": "Entradas al cine",
-        "fecha": "2025-05-13"
+        "fecha": "13-05-2025"
     },
     {
         "id": 8,
         "monto": 30,
         "categoria": "Transporte",
         "descripcion": "Bicicleta compartida",
-        "fecha": "2020-05-12"
+        "fecha": "12-05-2020"
     },
     {
         "id": 9,
         "monto": 500,
         "categoria": "Ropa",
         "descripcion": "Chaqueta de invierno",
-        "fecha": "2025-05-11"
+        "fecha": "11-05-2025"
     },
     {
         "id": 10,
         "monto": 40,
         "categoria": "Comida",
         "descripcion": "Desayuno en cafetería",
-        "fecha": "2022-05-10"
+        "fecha": "10-05-2022"
     },
     {
         "id": 11,
         "monto": 60,
         "categoria": "Comida",
         "descripcion": "Almuerzo en trabajo",
-        "fecha": "2025-05-09"
+        "fecha": "09-05-2025"
     },
     {
         "id": 12,
         "monto": 15,
         "categoria": "Entretenimiento",
         "descripcion": "Juego en línea",
-        "fecha": "2025-05-08"
+        "fecha": "08-05-2025"
     },
     {
         "id": 13,
         "monto": 90,
         "categoria": "Comida",
         "descripcion": "Cena de amigos",
-        "fecha": "2021-05-07"
+        "fecha": "07-05-2021"
     },
     {
         "id": 14,
         "monto": 120,
         "categoria": "Deportes",
         "descripcion": "Membresía gimnasio",
-        "fecha": "2025-05-06"
+        "fecha": "06-05-2025"
     },
     {
         "id": 15,
         "monto": 220,
         "categoria": "Tecnología",
         "descripcion": "Auriculares bluetooth",
-        "fecha": "2025-05-05"
+        "fecha": "05-05-2025"
     },
     {
         "id": 16,
         "monto": 80,
         "categoria": "Ropa",
         "descripcion": "Zapatos nuevos",
-        "fecha": "2020-05-04"
+        "fecha": "04-05-2020"
     },
     {
         "id": 17,
         "monto": 250,
         "categoria": "Transporte",
         "descripcion": "Gasolina",
-        "fecha": "2025-05-03"
+        "fecha": "03-05-2025"
     },
     {
         "id": 18,
         "monto": 110,
         "categoria": "Comida",
         "descripcion": "Cena con familia",
-        "fecha": "2021-05-02"
+        "fecha": "02-05-2021"
     },
     {
         "id": 19,
         "monto": 150,
         "categoria": "Salud",
         "descripcion": "Consulta médica",
-        "fecha": "2022-05-01"
+        "fecha": "01-05-2022"
     },
     {
         "id": 20,
         "monto": 70,
         "categoria": "Comida",
         "descripcion": "Sushi para llevar",
-        "fecha": "2025-04-30"
+        "fecha": "30-04-2025"
+    },
+    {
+        "id": 21,
+        "monto": 200,
+        "categoria": "Comida",
+        "descripcion": "N.A.",
+        "fecha": "20-05-2025"
+    },
+    {
+        "id": 22,
+        "monto": 200,
+        "categoria": "Comida",
+        "descripcion": "N.A.",
+        "fecha": "20-05-2025"
     }
 ]

@@ -25,19 +25,19 @@ while (dataBool):
         print("                      Registrar nuevo gasto                          ")
         print("=========================================================================")
         montoGasto = int(input("- Monto del gasto:   "))
-        categoriaGasto = input(" - Categoría (ej. comida, transporte, entretenimiento, otros):  ")
+        categoriaGasto = input("- Categoría (ej. comida, transporte, entretenimiento, otros):  ")
         descripcionGasto = input("- Descripción (opcional):   ")
         fechaGasto = input("- Fecha del gasto (DD-MM-YYYY):   ")
         print()
-        confirmacion = input("Ingrese 'S' para guardar o 'C' para cancelar."   )
+        confirmacion = input("Ingrese 'S' para guardar o 'C' para cancelar.   "   )
         print("=========================================================================")
         if (confirmacion.upper() == 'S'):
             diccionarioGastos={
                 "id": (listaData[len(listaData)-1]["id"])+1,
                 "monto": montoGasto,
-                "Categoria": categoriaGasto,
-                "Descripcion": descripcionGasto,
-                "Fecha": fechaGasto
+                "categoria": categoriaGasto,
+                "descripcion": descripcionGasto,
+                "fecha": fechaGasto
             }
             listaData.append(diccionarioGastos)
             guardarJSON(listaData)

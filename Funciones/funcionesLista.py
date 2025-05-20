@@ -51,7 +51,7 @@ def recorrerFecha(listaRecorrer, fechaInicio, fechaFin):
     print("")
 
     for i in range(len(listaRecorrer)):
-        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%Y-%m-%d")
+        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%d-%m-%Y")
 
         if(fechaInicio <= fechaGuia <= fechaFin):
 
@@ -71,7 +71,7 @@ def calcularGastos (listaRecorrer, tiempoX):
 
     for i in range(len(listaRecorrer)):
 
-        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%Y-%m-%d")
+        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%d-%m-%Y")
         # d = Diario
         if(tiempoX == "d"):
             if(fechaGuia.date() == today.date()):
