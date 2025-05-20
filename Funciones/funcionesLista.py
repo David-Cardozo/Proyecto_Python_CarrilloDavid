@@ -44,7 +44,6 @@ def recorrerCategoria(listaRecorrer, categoria):
 def recorrerFecha(listaRecorrer, fechaInicio, fechaFin):
     fechaInicio = datetime.strptime(fechaInicio, "%d-%m-%Y")
     fechaFin = datetime.strptime(fechaFin, "%d-%m-%Y")
-    resultado = []
 
     print("=========================================================================")
     print(f"         Filtro por fechas de: {fechaInicio} a {fechaFin}")
@@ -64,6 +63,25 @@ def recorrerFecha(listaRecorrer, fechaInicio, fechaFin):
             print("- Fecha de gasto:   ", listaRecorrer[i]["fecha"])
             print("=========================================================================")
 
-            resultado.append(listaRecorrer[i])
+# Esta funcion recorrera toda la lista en la cual se almacena nuestro diccionario
+# y calculara el total de gastos segun el x tiempo requerido
+def calcularGastos (listaRecorrer, tiempoX):
+    today = datetime.now()
+    total = 0
 
-    return resultado
+    for i in range(len(listaRecorrer)):
+
+        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%Y-%m-%d")
+        # d = Diario
+        if(tiempoX == "d"):
+            if(fechaGuia.date() == today.date()):
+                total += listaRecorrer[i]["monto"] 
+        # s = Semanal   
+        elif(tiempoX == "s"):    
+            if((today - fechaGuia).days <= 7):
+                total += listaRecorrer[i]["monto"]
+        #m = mensual
+        elif(tiempoX == "m"):
+            if(fechaGuia.year == today.year and fechaGuia.month == today.month):
+                total += listaRecorrer[i]["monto"]
+    return total

@@ -61,20 +61,27 @@ while (dataBool):
             opcionListarGas = (int(input("Escoja una opcion -Numerica- :  ")))
         
             if (opcionListarGas == 1):
+
                 recorrerLista(listaData)
+
             elif(opcionListarGas == 2):
+
                 categoria = input("Ingrese el nombre de la categoria:   ")
                 recorrerCategoria(listaData, categoria)
+
             elif(opcionListarGas == 3):
+
                 fechaInicio = input("Ingrese la fecha de inicio (En formato DD-MM-YYYY):  ")
                 fechaFin = input("Ingrese la fecha final (En formato DD-MM-YYYY):  ")
                 recorrerFecha(listaData, fechaInicio, fechaFin)
+
             elif(opcionListarGas == 4):
 
                 print("")
                 print("Regresando el menu principal!!!!")
                 print("")
                 boolGastos = False
+
             else:
                 print("")
                 print("¡Por favor escoja una de las opciones disponibles!")
@@ -96,3 +103,26 @@ while (dataBool):
             print("4. Regresar al menu principal")
             print("=========================================================================")
             opcionCalcularGas = (int(input("Escoja una opcion -Numerica- :  ")))
+
+            if(opcionCalcularGas == 1):
+                totalDiario = calcularGastos(listaData, "d")
+                print(f"- Total diario:   {totalDiario}")
+
+            elif(opcionCalcularGas == 2):
+                totalSemanal = calcularGastos(listaData, "s")
+                print(f"- Total semanal:   {totalSemanal}")
+
+            elif(opcionCalcularGas == 3):
+                totalMensual = calcularGastos(listaData, "m")
+                print(f"- Total mensual:    {totalMensual}")
+            elif(opcionCalcularGas == 4):
+
+                print("")
+                print("Regresando el menu principal!!!!")
+                print("")
+                boolCalculos = False
+
+            else:
+                print("")
+                print("¡Por favor escoja una de las opciones disponibles!")
+                print("")
