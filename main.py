@@ -2,6 +2,8 @@ from Funciones.funcionesJson import *
 from Funciones.funcionesLista import *
 
 dataBool = True
+boolGastos = True
+boolCalculos = True
 listaData = abrirJSON()
 
 while (dataBool):
@@ -42,4 +44,55 @@ while (dataBool):
         else:
             print("No se ha guardado el gasto")
     elif(opcionUsu == 2):
-        recorrerLista(listaData)
+        
+        while (boolGastos):
+
+            print("")
+            print("=========================================================================")
+            print("                         Listar Gastos")
+            print("=========================================================================")
+            print("Seleccione una opcion para filtrar los gastos:   ")
+            print("")
+            print("1. Ver todos los gastos")
+            print("2. Filtrar por categoria")
+            print("3. Filtrar por rango de fechas")
+            print("4. Regresar al menu principal")
+            print("=========================================================================")
+            opcionListarGas = (int(input("Escoja una opcion -Numerica- :  ")))
+        
+            if (opcionListarGas == 1):
+                recorrerLista(listaData)
+            elif(opcionListarGas == 2):
+                categoria = input("Ingrese el nombre de la categoria:   ")
+                recorrerCategoria(listaData, categoria)
+            elif(opcionListarGas == 3):
+                fechaInicio = input("Ingrese la fecha de inicio (En formato DD-MM-YYYY):  ")
+                fechaFin = input("Ingrese la fecha final (En formato DD-MM-YYYY):  ")
+                recorrerFecha(listaData, fechaInicio, fechaFin)
+            elif(opcionListarGas == 4):
+
+                print("")
+                print("Regresando el menu principal!!!!")
+                print("")
+                boolGastos = False
+            else:
+                print("")
+                print("¡Por favor escoja una de las opciones disponibles!")
+                print("")
+
+    elif(opcionUsu == 3):
+
+        while (boolCalculos):
+
+            print("")
+            print("=========================================================================")
+            print("                     Calcular Total de Gastos")
+            print("=========================================================================")
+            print("Seleccione el perido de calculo:   ")
+            print("")
+            print("1. Calcular total diario")
+            print("2. Calcular total semanal")
+            print("3. Calcular total mensual")
+            print("4. Regresar al menu principal")
+            print("=========================================================================")
+            opcionCalcularGas = (int(input("Escoja una opcion -Numerica- :  ")))
