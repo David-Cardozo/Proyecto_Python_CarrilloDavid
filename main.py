@@ -4,7 +4,8 @@ from Funciones.funcionesLista import *
 dataBool = True
 boolGastos = True
 boolCalculos = True
-listaData = abrirJSON()
+boolInforme = True
+listaData = abrirJSONData()
 
 while (dataBool):
     print("=========================================================================")
@@ -42,7 +43,7 @@ while (dataBool):
                 "fecha": fechaGasto
             }
             listaData.append(diccionarioGastos)
-            guardarJSON(listaData)
+            guardarJSONData(listaData)
         else:
             print("No se ha guardado el gasto")
     elif(opcionUsu == 2):
@@ -143,3 +144,22 @@ while (dataBool):
                 print("")
                 print("¡Por favor escoja una de las opciones disponibles!")
                 print("")
+    
+    elif(opcionUsu == 4):
+
+        while (boolInforme):
+            print("")
+            print("")
+            print("=========================================================================")
+            print("                        Generar Reporte de Gastos")
+            print("=========================================================================")
+            print("Seleccione una opcion para filtrar los gastos:   ")
+            print("")
+            print("1. Reporte diario")
+            print("2. Reporte semanal")
+            print("3. Reporte mensual")
+            print("4. Regresar al menu principal")
+            print("=========================================================================")
+            opcionReportes = (int(input("Escoja una opcion -Numerica- :  ")))
+            print("")
+            print("")

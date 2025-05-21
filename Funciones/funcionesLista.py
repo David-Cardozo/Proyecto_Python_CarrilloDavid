@@ -100,3 +100,34 @@ def desgloseCategoria (listaRecorrer):
         print("- Categoria:   ", listaRecorrer[i]["categoria"])
         print("- Monto:   ", listaRecorrer[i]["monto"])
         print("=========================================================================")
+
+def generarReporte(listaRecorrer, tipoInforme):
+    text = f"====== Informe {tipoInforme} ======"
+    print(text)
+
+    today = datetime.now()
+    total = 0
+
+    for i in range(len(listaRecorrer)):
+        
+        fechaGuia = datetime.strptime(listaRecorrer[i]["fecha"], "%d-%m-%Y")
+
+        # d = Diario
+        if(tipoInforme == "Diario"):
+            if(fechaGuia.date() == today.date()):
+                total += listaRecorrer[i]["monto"]
+
+                text += f"Gasto N° {listaRecorrer[i]["id"]}"
+                
+                
+        # s = Semanal   
+        elif(tipoInforme == "Semanal"):    
+            if((today - fechaGuia).days <= 7):
+                total += listaRecorrer[i]["monto"]
+               
+        #m = mensual
+        elif(tipoInforme == "Mensual"):
+            if(fechaGuia.year == today.year and fechaGuia.month == today.month):
+                total += listaRecorrer[i]["monto"]
+                
+    return text
