@@ -163,3 +163,19 @@ while (dataBool):
             opcionReportes = (int(input("Escoja una opcion -Numerica- :  ")))
             print("")
             print("")
+
+            if(opcionReportes == 1):
+                reporteDiario = generarReporte(listaData, "Diario")
+                print("")
+                print(reporteDiario)
+                print("")
+            elif(opcionReportes == 2):
+                reporteSemanal = generarReporte(listaData, "Semanal")
+                print("")
+                print(reporteSemanal)
+                print("")
+            elif(opcionReportes == 3):
+                reporteDiario = generarReporte(listaData, "Diario")
+                print("")
+                print(reporteDiario)
+                print("")

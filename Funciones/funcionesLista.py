@@ -102,9 +102,7 @@ def desgloseCategoria (listaRecorrer):
         print("=========================================================================")
 
 def generarReporte(listaRecorrer, tipoInforme):
-    text = f"====== Informe {tipoInforme} ======"
-    print(text)
-
+    text = f"====== Informe {tipoInforme} ======\n"
     today = datetime.now()
     total = 0
 
@@ -115,19 +113,38 @@ def generarReporte(listaRecorrer, tipoInforme):
         # d = Diario
         if(tipoInforme == "Diario"):
             if(fechaGuia.date() == today.date()):
-                total += listaRecorrer[i]["monto"]
+                total += listaRecorrer[i]['monto']
 
-                text += f"Gasto N° {listaRecorrer[i]["id"]}"
+                text += f"Gasto N°: {listaRecorrer[i]['id']}\n"
+                text += f"Categoria: {listaRecorrer[i]['categoria']}\n"
+                text += f"Descripcion: {listaRecorrer[i]['descripcion']}\n"
+                text += f"Fecha: {listaRecorrer[i]['fecha']}\n"
+                text += f"Total acumulado: {total}\n"
+                text += "\n"
                 
                 
         # s = Semanal   
         elif(tipoInforme == "Semanal"):    
             if((today - fechaGuia).days <= 7):
                 total += listaRecorrer[i]["monto"]
+
+                text += f"Gasto N°: {listaRecorrer[i]['id']}\n"
+                text += f"Categoria: {listaRecorrer[i]['categoria']}\n"
+                text += f"Descripcion: {listaRecorrer[i]['descripcion']}\n"
+                text += f"Fecha: {listaRecorrer[i]['fecha']}\n"
+                text += f"Total acumulado: {total}\n"
+                text += "\n"
                
         #m = mensual
         elif(tipoInforme == "Mensual"):
             if(fechaGuia.year == today.year and fechaGuia.month == today.month):
                 total += listaRecorrer[i]["monto"]
+
+                text += f"Gasto N°: {listaRecorrer[i]['id']}\n"
+                text += f"Categoria: {listaRecorrer[i]['categoria']}\n"
+                text += f"Descripcion: {listaRecorrer[i]['descripcion']}\n"
+                text += f"Fecha: {listaRecorrer[i]['fecha']}\n"
+                text += f"Total acumulado: {total}\n"
+                text += "\n"
                 
     return text

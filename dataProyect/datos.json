@@ -88,14 +88,14 @@
         "monto": 120,
         "categoria": "Deportes",
         "descripcion": "Membresía gimnasio",
-        "fecha": "06-05-2025"
+        "fecha": "21-05-2025"
     },
     {
         "id": 15,
         "monto": 220,
         "categoria": "Tecnología",
         "descripcion": "Auriculares bluetooth",
-        "fecha": "05-05-2025"
+        "fecha": "21-05-2025"
     },
     {
         "id": 16,
@@ -109,7 +109,7 @@
         "monto": 250,
         "categoria": "Transporte",
         "descripcion": "Gasolina",
-        "fecha": "03-05-2025"
+        "fecha": "21-05-2025"
     },
     {
         "id": 18,
