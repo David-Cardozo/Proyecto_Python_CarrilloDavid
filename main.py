@@ -278,13 +278,13 @@ while (dataBool):
         print("")
         print("")
         opcionActualizar = int(input("Por favor ingresar el id del gasto deseado:"))
-        mostrarGasto(opcionActualizar-1)
-        userTemp = listaData[opcionActualizar-1]
+        mostrarGasto(listaData, opcionActualizar-1)
+        userTemp = listaData[opcionActualizar-1]["id"]
         montoTemp = int(input("Ingrese el monto actualizado:   "))
         categoriaTemp = input("Ingrese la categoria actualizada:   ")
         descripcionTemp = input("Ingrese la descripcion actualizada:   ")
-        fechaTemp = datetime(input("Ingrese la fecha actualizada (DD-MM-YYYY):   "))
-        dicAgregar = {'id' : userTemp, 'monto' : montoTemp, 'categoria' : categoriaTemp, 'descripcion' : descripcionTemp, 'fecha' : fechaTemp}
+        fechaTemp = input("Ingrese la fecha actualizada (DD-MM-YYYY):   ")
+        dicAgregar = {"id" : userTemp, "monto" : montoTemp, "categoria" : categoriaTemp, "descripcion" : descripcionTemp, "fecha" : fechaTemp}
         listaData[opcionActualizar-1] = dicAgregar
         guardarJSONData(listaData)
         print("")
