@@ -1,4 +1,3 @@
-import json
 from Funciones.funcionesJson import *
 from Funciones.funcionesLista import *
 
