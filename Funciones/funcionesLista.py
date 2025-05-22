@@ -148,3 +148,19 @@ def generarReporte(listaRecorrer, tipoInforme):
                 text += "\n"
                 
     return text
+
+# Esta funcion muestra un solo gasto segun el id ingresado por el usuario
+def mostrarGasto(listaRecorrer, idDigitado):
+    print("")
+    print("")
+    print("=========================================================================")
+    print(f"                        Gasto {idDigitado}")
+    print("=========================================================================")
+    print("")
+    print("- Gasto N°", listaRecorrer[idDigitado-1]["id"])
+    print("- Monto de gasto:   ", listaRecorrer[idDigitado-1]["monto"])
+    print("- Categoria de gasto:   ", listaRecorrer[idDigitado-1]["categoria"])
+    print("- Descripcion de gasto:   ", listaRecorrer[idDigitado-1]["descripcion"])
+    print("- Fecha de gasto:   ", listaRecorrer[idDigitado-1]["fecha"])
+    print("")
+    print("")

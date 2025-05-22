@@ -7,13 +7,6 @@
         "fecha": "18-05-2024"
     },
     {
-        "id": 3,
-        "monto": 120,
-        "categoria": "Ropa",
-        "descripcion": "Compra de camiseta",
-        "fecha": "17-05-2025"
-    },
-    {
         "id": 4,
         "monto": 250,
         "categoria": "Transporte",
@@ -31,7 +24,7 @@
         "id": 6,
         "monto": 15,
         "categoria": "Comida",
-        "descripcion": "Café y pastel",
+        "descripcion": "Caf\u00c3\u00a9 y pastel",
         "fecha": "14-05-2023"
     },
     {
@@ -59,7 +52,7 @@
         "id": 10,
         "monto": 40,
         "categoria": "Comida",
-        "descripcion": "Desayuno en cafetería",
+        "descripcion": "Desayuno en cafeter\u00c3\u00ada",
         "fecha": "10-05-2022"
     },
     {
@@ -73,7 +66,7 @@
         "id": 12,
         "monto": 15,
         "categoria": "Entretenimiento",
-        "descripcion": "Juego en línea",
+        "descripcion": "Juego en l\u00c3\u00adnea",
         "fecha": "08-05-2025"
     },
     {
@@ -87,13 +80,13 @@
         "id": 14,
         "monto": 120,
         "categoria": "Deportes",
-        "descripcion": "Membresía gimnasio",
+        "descripcion": "Membres\u00c3\u00ada gimnasio",
         "fecha": "21-05-2025"
     },
     {
         "id": 15,
         "monto": 220,
-        "categoria": "Tecnología",
+        "categoria": "Tecnolog\u00c3\u00ada",
         "descripcion": "Auriculares bluetooth",
         "fecha": "21-05-2025"
     },
@@ -122,7 +115,7 @@
         "id": 19,
         "monto": 150,
         "categoria": "Salud",
-        "descripcion": "Consulta médica",
+        "descripcion": "Consulta m\u00c3\u00a9dica",
         "fecha": "20-05-2025"
     },
     {

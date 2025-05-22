@@ -237,3 +237,34 @@ while (dataBool):
                 print("Regresando el menu principal!!!!")
                 print("")
                 boolInforme = False
+    
+    elif (opcionUsu == 5):
+        print("")
+        print("")
+        print("=========================================================================")
+        print("                        Eliminar gasto individual")
+        print("=========================================================================")
+        print("")
+        print("")
+        recorrerLista(listaData)
+        print("")
+        print("")
+        opcionEliminar = int(input("Por favor ingresar el ID del gasto a eliminar:"))
+        mostrarGasto(listaData, opcionEliminar)
+        opcionComprobar = int(input("¿Estás seguro de eliminar a esta persona? (1.Si --- 2.No):"))
+
+        if (opcionComprobar == 1):
+            temp = listaData.pop(opcionEliminar-1)
+            guardarJSONLogs(temp)
+            guardarJSONData(listaData)
+            print("")
+            print("")
+            print("Usuario eliminado!")
+            print("")
+            print("")
+        else:
+            print("")
+            print("")
+            print("Gracias por hacer la confirmacion")
+            print("")
+            print("")
