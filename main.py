@@ -18,8 +18,8 @@ while (dataBool):
     print("2. Listar gastos")
     print("3. Calcular total de gastos")
     print("4. Generar reporte de gastos")
-    print("5. Eliminar gasto especifico")
-    print("6. Actualizar gasto especifico")
+    print("5. Eliminar gasto especifico (Segun ID)")
+    print("6. Actualizar gasto especifico (Segun ID)")
     print("7. Salir")
     opcionUsu = (int(input("Escoja una opcion -Numerica- :  ")))
     print("")
@@ -150,7 +150,7 @@ while (dataBool):
     elif(opcionUsu == 4):
 
         while (boolInforme):
-            
+
             print("")
             print("")
             print("=========================================================================")
@@ -183,8 +183,7 @@ while (dataBool):
                 elif(opcionGuardado == 2):
                     dicData = {'informe' : reporteDiario}
                     informes.append(dicData)
-                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
-                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    guardarJSONInfo(informes)
                     print("El informe ha sido guardado en informes.json")
                     print("")
                 else:
@@ -206,8 +205,7 @@ while (dataBool):
                 elif(opcionGuardado == 2):
                     dicData = {'informe' : reporteSemanal}
                     informes.append(dicData)
-                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
-                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    guardarJSONInfo(informes)
                     print("El informe ha sido guardado en informes.json")
                     print("")
                 else:
@@ -229,9 +227,13 @@ while (dataBool):
                 elif(opcionGuardado == 2):
                     dicData = {'informe' : reporteMensual}
                     informes.append(dicData)
-                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
-                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    guardarJSONInfo(informes)
                     print("El informe ha sido guardado en informes.json")
                     print("")
                 else:
                     print("Ingrese una opcion valida!")
+            elif (opcionReportes == 4):
+                print("")
+                print("Regresando el menu principal!!!!")
+                print("")
+                boolInforme = False
