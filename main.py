@@ -292,3 +292,10 @@ while (dataBool):
         print("El usuario ha sido actualizado!!!")
         print("")
         print("")
+
+    elif (opcionUsu == 7):
+        print("Hasta pronto!")
+        dataBool = False
+    
+    else: 
+        print("Ingrese una opcion valida!")
