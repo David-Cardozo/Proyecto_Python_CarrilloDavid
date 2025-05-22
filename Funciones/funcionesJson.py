@@ -28,7 +28,6 @@ def abrirJSONLogs():
 
 def guardarJSONLogs(dic):
     dicTemp = []
-
     dicTemp = abrirJSONLogs()
     dicTemp.append(dic)
     with open("./dataProyect/logs.json",'w') as outFile:
