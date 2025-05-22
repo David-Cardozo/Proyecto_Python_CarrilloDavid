@@ -19,3 +19,4 @@ def abrirJSONInfo():
 def guardarJSONInfo(dic):
     with open("./dataProyect/informes.json",'w') as outFile:
         json.dump(dic,outFile)
+

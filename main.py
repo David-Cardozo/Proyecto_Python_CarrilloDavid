@@ -1,3 +1,4 @@
+import json
 from Funciones.funcionesJson import *
 from Funciones.funcionesLista import *
 
@@ -6,6 +7,7 @@ boolGastos = True
 boolCalculos = True
 boolInforme = True
 listaData = abrirJSONData()
+informes = abrirJSONInfo()
 
 while (dataBool):
     print("=========================================================================")
@@ -148,6 +150,7 @@ while (dataBool):
     elif(opcionUsu == 4):
 
         while (boolInforme):
+            
             print("")
             print("")
             print("=========================================================================")
@@ -166,16 +169,69 @@ while (dataBool):
 
             if(opcionReportes == 1):
                 reporteDiario = generarReporte(listaData, "Diario")
+
                 print("")
-                print(reporteDiario)
+                print("Desea mostrar el informe en pantalla o guardarlo en JSON:")
+                print("1. Mostrar en pantalla")
+                print("2. Guardar en JSON")
+                opcionGuardado = (int(input("Escoja una opcion -Numerica- :  ")))
                 print("")
+
+                if(opcionGuardado == 1):
+                    print(reporteDiario)
+                    print("")
+                elif(opcionGuardado == 2):
+                    dicData = {'informe' : reporteDiario}
+                    informes.append(dicData)
+                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
+                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    print("El informe ha sido guardado en informes.json")
+                    print("")
+                else:
+                    print("Ingrese una opcion valida!")
+
             elif(opcionReportes == 2):
                 reporteSemanal = generarReporte(listaData, "Semanal")
+
                 print("")
-                print(reporteSemanal)
+                print("Desea mostrar el informe en pantalla o guardarlo en JSON:")
+                print("1. Mostrar en pantalla")
+                print("2. Guardar en JSON")
+                opcionGuardado = (int(input("Escoja una opcion -Numerica- :  ")))
                 print("")
+
+                if (opcionGuardado == 1):
+                    print(reporteSemanal)
+                    print("")
+                elif(opcionGuardado == 2):
+                    dicData = {'informe' : reporteSemanal}
+                    informes.append(dicData)
+                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
+                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    print("El informe ha sido guardado en informes.json")
+                    print("")
+                else:
+                    print("Ingrese una opcion valida!")
+
             elif(opcionReportes == 3):
-                reporteDiario = generarReporte(listaData, "Diario")
+                reporteMensual = generarReporte(listaData, "Mensual")
+
                 print("")
-                print(reporteDiario)
+                print("Desea mostrar el informe en pantalla o guardarlo en JSON:")
+                print("1. Mostrar en pantalla")
+                print("2. Guardar en JSON")
+                opcionGuardado = (int(input("Escoja una opcion -Numerica- :  ")))
                 print("")
+
+                if (opcionGuardado == 1):
+                    print(reporteMensual)
+                    print("")
+                elif(opcionGuardado == 2):
+                    dicData = {'informe' : reporteMensual}
+                    informes.append(dicData)
+                    with open('./dataProyect/informes.json', 'w', encoding='utf-8') as json_file:
+                        json.dump(informes, json_file, ensure_ascii=False, indent=4)
+                    print("El informe ha sido guardado en informes.json")
+                    print("")
+                else:
+                    print("Ingrese una opcion valida!")
