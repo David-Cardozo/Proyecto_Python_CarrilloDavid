@@ -268,3 +268,27 @@ while (dataBool):
             print("Gracias por hacer la confirmacion")
             print("")
             print("")
+    
+    elif (opcionUsu == 6):
+        print("")
+        print("")
+        print("=========================================================================")
+        print("                        Actualizar gasto")
+        print("=========================================================================")
+        print("")
+        print("")
+        opcionActualizar = int(input("Por favor ingresar el id del gasto deseado:"))
+        mostrarGasto(opcionActualizar-1)
+        userTemp = listaData[opcionActualizar-1]
+        montoTemp = int(input("Ingrese el monto actualizado:   "))
+        categoriaTemp = input("Ingrese la categoria actualizada:   ")
+        descripcionTemp = input("Ingrese la descripcion actualizada:   ")
+        fechaTemp = datetime(input("Ingrese la fecha actualizada (DD-MM-YYYY):   "))
+        dicAgregar = {'id' : userTemp, 'monto' : montoTemp, 'categoria' : categoriaTemp, 'descripcion' : descripcionTemp, 'fecha' : fechaTemp}
+        listaData[opcionActualizar-1] = dicAgregar
+        guardarJSONData(listaData)
+        print("")
+        print("")
+        print("El usuario ha sido actualizado!!!")
+        print("")
+        print("")
